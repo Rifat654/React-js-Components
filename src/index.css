@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.bb{
+    background-image: url( "./assets/bgg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
