@@ -18,6 +18,15 @@ const API = () => {
     }, [])
     return (
         <div>
+            <div className='flex flex-col justify-center items-center h-screen bg-[#23272F]'>
+                {/* slider components */}
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                </div>
+            </div>
 
         </div>
     )
