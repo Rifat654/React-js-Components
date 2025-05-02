@@ -12,7 +12,7 @@ const User = () => {
         <div className='flex flex-col justify-center items-center mt-10'>
             <div>
                 <h1 className='text-2xl text-center font-bold'>User Card</h1>
-                <div className='w-[200px] h-[200px] bg-purple-800 '>
+                <div className='w-[300px] h-[250px] rounded-lg  bg-gray-400 shadow-lg flex flex-col justify-center items-center mt-5'>
                     <h2>hello user</h2>
 
                 </div>
