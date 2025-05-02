@@ -1,6 +1,6 @@
 import React, { useEffect, } from 'react'
 // import { getPosts } from "../Data"
-import Cards from './Cards'
+import Cards from '../Cards'
 const API = () => {
 
 

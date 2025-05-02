@@ -1,5 +1,5 @@
 import React from 'react'
-import API from './components/API'
+import API from './components/Slider/API'
 import Jokes from './components/Random-jokes/Jokes'
 import User from './components/User-Card/User'
 
