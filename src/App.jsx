@@ -9,7 +9,7 @@ const App = () => {
     <div className=' bg-]'>
       <Jokes />
       <User />
-      <API />
+      {/* <API /> */}
     </div>
   )
 }
