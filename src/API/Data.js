@@ -1,5 +1,5 @@
 // dummy data for the accordion component
-const data = [
+export const data = [
     {
       id  : '1',
       question: "What are accordion components?",
@@ -26,4 +26,3 @@ const data = [
     },
   ];
 
-  export default data;
