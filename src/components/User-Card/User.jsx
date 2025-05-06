@@ -8,7 +8,7 @@ const User = () => {
             .then((res) => res.json())
             .then((data) => {
                 setUser(data.results)
-                console.log(data.results);
+
 
             })
     }, [])
