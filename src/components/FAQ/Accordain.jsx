@@ -12,7 +12,7 @@ const Accordain = () => {
                 <div className='flex flex-col items-center justify-center mt-10'>
                     {
                         data.map((item) => (
-                            <div className='w-[550px] bg-[#182f51] flex items-center justify-between p-4 rounded-lg mb-4' key={item.id}>
+                            <div className='w-[550px] bg-purple-900 flex items-center justify-between p-4 rounded-lg mb-4' key={item.id}>
                                 <p key={item.id} >{item.question}</p>
                                 <span className='cursor-pointer text-2xl font-bold'>+</span>
                             </div>
