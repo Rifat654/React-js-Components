@@ -24,10 +24,10 @@ const API = () => {
     }, [])
     return (
         <div className="text-gray-200 h-[400px] text-center my-20 ">
-            <div>
+            <div className="grid grid-cols-3 gap-4">
                 {
                     user.map((list) => (
-                        <p key={list.id}>{list.category}</p>
+                        <p key={list.id}>{list.price}</p>
                     ))
                 }
             </div>
