@@ -5,11 +5,19 @@ const API = () => {
     const [user, setUser] = useState([])
     useEffect(() => {
         const Userdata = async () => {
-            fetch("https://fakestoreapi.com/products")
-                .then((res) => res.json())
-                .then((json) => setUser(json))
-                .catch((err) => console.log(err)
-                )
+            try {
+                const res = await fetch("https://fakestoreapi.com/products")
+                const data = await res.json()
+                setUser(data)
+                console.log(data);
+
+            }
+            catch (err) {
+                console.log(err);
+
+            }
+
+
 
         }
         Userdata();
@@ -18,8 +26,8 @@ const API = () => {
         <div className="text-gray-200 h-[400px] text-center my-20 ">
             <div>
                 {
-                    user.map((list, index) => (
-                        <p key={index[0]}>{list.category}</p>
+                    user.map((list) => (
+                        <p key={list.id}>{list.category}</p>
                     ))
                 }
             </div>
