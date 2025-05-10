@@ -27,7 +27,7 @@ const API = () => {
             <div className="grid grid-cols-3 gap-4">
                 {
                     user.map((list) => (
-                        <p key={list.id}>{list.price}</p>
+                        <p key={list.id}>{list.tittle}</p>
                     ))
                 }
             </div>
