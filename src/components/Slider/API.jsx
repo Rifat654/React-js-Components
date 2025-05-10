@@ -12,13 +12,13 @@ const API = () => {
 
         }
         Userdata();
-    })
+    }, [])
     return (
         <div className="text-gray-200 h-[400px] text-center my-20 ">
             <div>
                 {
-                    user.map((list) => (
-                        <p>{list.price}</p>
+                    user.map((list, index) => (
+                        <p key={index[0]}>{list.category}</p>
                     ))
                 }
             </div>
