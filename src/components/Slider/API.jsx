@@ -5,10 +5,11 @@ const API = () => {
     const [user, setUser] = useState([])
     useEffect(() => {
         const Userdata = async () => {
-            const response = await fetch("https://fakestoreapi.com/products");
-            const data = await response.json();
-            console.log(data);
-            setUser(data)
+            fetch("https://fakestoreapi.com/products")
+                .then((res) => res.json())
+                .then((json) => setUser(json))
+                .catch((err) => console.log(err)
+                )
 
         }
         Userdata();
