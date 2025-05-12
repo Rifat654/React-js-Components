@@ -8,7 +8,7 @@ const Accordain = () => {
 
     return (
         <div>
-            <div className=' text-gray-200 h-auto hidden text-center my-20 '>
+            <div className=' text-gray-300  text-center my-20 '>
                 <h1 className='text-3xl font-bold'>FAQ</h1>
 
                 <div className='flex flex-col items-center justify-center px-5 mt-10'>
