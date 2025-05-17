@@ -1,4 +1,4 @@
-// Services data for the FAQ section
+// Services data for the FAQ section component {Accordain.jsx}
 export const data = [
     {
         id: 1,
