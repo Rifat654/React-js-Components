@@ -14,7 +14,7 @@ const FAQ = () => {
 
     }
     return (
-        <div className="w-full sm: h-[800px] flex flex-col items-center justify-center px-5 ">
+        <div className="w-full sm: my-20 flex flex-col items-center justify-center px-5 ">
             {
                 data.map((item) => {
                     return (
