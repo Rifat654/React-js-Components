@@ -12,7 +12,7 @@ const App = () => {
       <Jokes />
       <User />
       <Accordain />
-      <API />
+
     </div>
   )
 }

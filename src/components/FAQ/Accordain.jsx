@@ -1,37 +1,42 @@
-import React, { useState } from 'react'
-import { data } from '../../API/Data.js'
-const Accordain = () => {
-    const [open, setOpen] = useState(false)
-    const Click = () => {
-        setOpen(!open)
+import { LuEyeClosed } from "react-icons/lu";
+import { MdRemoveRedEye } from "react-icons/md";
+import { useState } from "react"
+import { data } from "../../API/Data"
+
+const FAQ = () => {
+
+    const [show, setShow] = useState(false)
+
+    const handleClick = (getid) => {
+
+        setShow(getid === show ? null : getid)
+        console.log(getid);
+
     }
-
     return (
-        <div>
-            <div className=' text-gray-300  text-center my-20 '>
-                <h1 className='text-3xl font-bold'>FAQ</h1>
+        <div className="w-full sm: h-[800px] flex flex-col items-center justify-center px-5 ">
+            {
+                data.map((item) => {
+                    return (
+                        <div className=" w-full sm:w-[500px] rounded-2xl bg-purple-950 text-white p-5 my-4">
+                            <div onClick={() => handleClick(item.id)} className="flex items-center justify-between">
+                                <h2 className="text-xl ">{item.question}</h2>
+                                <span>{show === item.id ? <MdRemoveRedEye /> : <LuEyeClosed />}</span>
+                            </div>
 
-                <div className='flex flex-col items-center justify-center px-5 mt-10'>
-                    {
-                        data.map((item, index) => {
-                            return (
-                                <div key={index} className='w-full max-w-[600px] bg-[#1F2937] rounded-lg shadow-md mb-4 p-4  flex flex-col items-center justify-between' >
-                                    <div className='flex items-center justify-between w-full pb-5' >
-                                        <h3>{item.question}</h3>
-                                        <button onClick={Click} className=' text-2xl font-bold cursor-pointer'>{open ? <span>-</span> : <span>+</span>}</button>
-                                    </div>
-                                    <p> {open ? item.answer : ""}</p>
-                                </div>
+                            {
+                                show === item.id ?
+                                    <p className="text-[14px] text-slate-400">{item.answer}</p>
+                                    : null
+                            }
+                        </div>
+                    )
+                })
+            }
 
-                            )
-
-                        })
-                    }
-                </div>
-            </div>
 
         </div>
     )
 }
 
-export default Accordain
+export default FAQ
