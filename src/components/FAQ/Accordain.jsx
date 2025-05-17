@@ -15,6 +15,7 @@ const FAQ = () => {
     }
     return (
         <div className="w-full sm: my-20 flex flex-col items-center justify-center px-5 ">
+            <h1 className="text-3xl text-white mb-5 font-semibold">FAQ Section</h1>
             {
                 data.map((item) => {
                     return (
